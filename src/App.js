@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import EnrolmentForm from './components/EnrolmentForm';
+import FormikContainer from './components/FormikContainer';
+import LoginForm from './components/LoginForm';
+import RegistrationForm from './components/RegistrationForm';
+import OldYoutubeForm from './components/OldYoutubeForm';
+import {theme, ThemeProvider} from "@chakra-ui/react"
+import ChakraInput from './components/ChakraInput';
+// import YoutubeForm from './components/YoutubeForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+        <div className="App">
+        <EnrolmentForm />
+        {/* <ChakraInput/> */}
+        </div> 
+    </ThemeProvider>
+    
   );
 }
 
